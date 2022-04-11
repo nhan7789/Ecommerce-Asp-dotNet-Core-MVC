@@ -1,0 +1,234 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Ecommerce</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+
+    @*   Header - Footer   *@
+    <link href="~/css/ui/header.css" rel="stylesheet" />
+    <link href="~/css/ui/footer.css" rel="stylesheet" />
+    <link href="~/css/ui/index.css" rel="stylesheet" />
+    @*   Css Category Page - Template  *@
+    <link href="~/css/ui/categorypage/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/css/ui/categorypage/linearicons.css" rel="stylesheet" />
+    <link href="~/css/ui/categorypage/catepage.css" rel="stylesheet" />
+    <link href="~/css/ui/categorypage/nice-select.css" rel="stylesheet" />
+    <link href="~/css/ui/categorypage/nouislider.min.css" rel="stylesheet" />
+    <link href="~/css/ui/categorypage/owl.carousel.css" rel="stylesheet" />
+    <link href="~/css/ui/categorypage/themify-icons.css" rel="stylesheet" />
+    @* Product Slider -- Index *@
+    <link href="~/css/ProductSlider.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
+
+</head>
+<body>
+    <header>
+          <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+@*                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">VOD.UI</a>
+*@                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <partial name="_LoginPartial" />
+                    @*<ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        </li>
+                    </ul>*@
+                </div>
+            </div>
+        </nav>
+        @*<div class="bg-wrap-header-top">
+            <div class="wrap-header-section-top">
+                <div class="content-header-top">
+                     <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <partial name="_LoginPartial" />
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        </li>
+                    </ul>
+                </div>
+                    <a routerLink="/about-us"> ABOUT US </a>
+                    <a href="javascript:void(0)"> REGISTER </a>
+                    <a href="javascript:void(0)"> LOGIN </a>
+                </div>
+            </div>
+        </div>*@
+
+        <div class="bg-wrap-header-bot">
+            <div class="wrap-header-section-bot">
+                <div class="logo-header-bot">
+                    <a asp-action="Index"
+                       asp-controller="Home" asp-area="">
+                        <img src="~/images/logo/logo.png" title="Logo" alt="Logo" />
+                    </a>
+                </div>
+
+                <div class="content-header-bot">
+                    <vc:navigation-menu />
+                </div>
+                <div class="button-header-bot">
+                    <form onsubmit="event.preventDefault();" class="search-form">
+                        <input id="search" type="search" class="search-input" placeholder="SEARCH">
+                        <button class="search-button">
+                            Search
+                        </button>
+                    </form>
+                    <div class="content-header-bot">
+                        <vc:cart-summary />
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+    <footer class="bg-wrap-footer text-center text-white">
+        <!-- Grid container -->
+        <div class="container p-4">
+            <!-- Section: Social media -->
+            <section class="mb-4">
+                <a class="btn m-1" href="#!" role="button">
+                    <div class="wrap-social-icon">
+                        <img src="~/images/icons/social-facebook.png" title="facebook" alt="facebook">
+                    </div>
+                </a>
+                <a class="btn m-1" href="#!" role="button">
+                    <div class="wrap-social-icon">
+                        <img src="~/images/icons/social-zalo.png" title="zalo" alt="zalo">
+                    </div>
+                </a>
+                <a class="btn m-1" href="#!" role="button">
+                    <div class="wrap-social-icon">
+                        <img src="~/images/icons/social-instagram.png" title="instagram" alt="instagram">
+                    </div>
+                </a>
+                <a class="btn m-1" href="#!" role="button">
+                    <div class="wrap-social-icon">
+                        <img src="~/images/icons/social-youtube.png" title="youtube" alt="youtube">
+                    </div>
+                </a>
+            </section>
+            <!-- Section: Social media -->
+            <!-- Section: Form -->
+            <section class="">
+                <form action="">
+                    <!--Grid row-->
+                    <div class="row d-flex justify-content-center">
+                        <!--Grid column-->
+                        <div class="col-auto">
+                            <p class="pt-2">
+                                <strong>Sign up for our newsletter</strong>
+                            </p>
+                        </div>
+                        <!--Grid column-->
+                        <!--Grid column-->
+                        <div class="col-md-5 col-12">
+                            <!-- Email input -->
+                            <div class="form-outline form-white mb-4">
+                                <input type="email" id="form5Example21" class="form-control" />
+                                @*<label class="form-label" for="form5Example21">Email address</label>*@
+                            </div>
+                        </div>
+                        <!--Grid column-->
+                        <!--Grid column-->
+                        <div class="col-auto">
+                            <!-- Submit button -->
+                            <button type="submit" class="btn btn-outline-light mb-4">
+                                Subscribe
+                            </button>
+                        </div>
+                        <!--Grid column-->
+                    </div>
+                    <!--Grid row-->
+                </form>
+            </section>
+            <!-- Section: Form -->
+            <!-- Section: Text -->
+            @*<section class="mb-4">
+                    <p>
+
+                    </p>
+                </section>*@
+            <!-- Section: Text -->
+            <!-- Section: Links -->
+            <section class="">
+                <!--Grid row-->
+                <div class="row">
+                    <!--Grid column-->
+                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                        <div class="list-unstyled mb-0">
+                            <a href="#!">
+                                <h5 class="text-uppercase" style="color:white">find a store</h5>
+                            </a>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                        <div class="list-unstyled mb-0">
+                            <a href="#!">
+                                <h5 class="text-uppercase" style="color:white">become a member</h5>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                        <div class="list-unstyled mb-0">
+                            <a href="#!">
+                                <h5 class="text-uppercase" style="color:white">send us feedback</h5>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                        <div class="list-unstyled mb-0">
+                            <a href="#!">
+                                <h5 class="text-uppercase" style="color:white">news</h5>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!--Grid row-->
+            </section>
+            <!-- Section: Links -->
+        </div>
+        <!-- Grid container -->
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            <a href="javascript:void(0)" title="local">
+                <img style="width: 12px; margin-right: 10px;" src="~/images/icons/icon-location.png">
+                <b style="color: white;">VIET NAM</b>
+            </a>
+            © 2022 Copyright
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+
+
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @* Product Slider -- Index *@
+    <script src="~/js/ProductSlider.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.js"></script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

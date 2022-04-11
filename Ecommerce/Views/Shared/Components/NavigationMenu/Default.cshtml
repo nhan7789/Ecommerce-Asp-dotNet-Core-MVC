@@ -1,0 +1,16 @@
+﻿
+@model IEnumerable<string>
+<div class="wrap-button">
+    <div class="has-child">
+        @foreach (string category in Model)
+        {
+
+            <a style="text-transform: uppercase;" asp-action="Category" asp-controller="Home"
+               asp-route-category="@category">
+                @category
+            </a>
+
+        }
+    </div>
+
+</div>

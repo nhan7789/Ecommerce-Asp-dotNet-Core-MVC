@@ -1,0 +1,21 @@
+﻿@page
+@{
+    Layout = "_Layout";
+}
+
+<link href="~/css/styleSuccessful.css" rel="stylesheet" />
+<div id="notfound">
+    <div class="notfound">
+        <h1>
+            <img width="200" height="150" src="~/images/icons/tickSuccessful.png" alt="..." />
+        </h1>
+        <h2>THANKS!</h2>
+        <p style="text-transform: uppercase">Thanks for placing order #@OrderId</p>
+        <a class="btn btn-primary" asp-controller="Home">Return to Store</a>
+    </div>
+</div>
+
+@functions {
+    [BindProperty(SupportsGet = true)]
+    public string OrderId { get; set; }
+}

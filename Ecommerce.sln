@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31911.196
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ecommerce", "Ecommerce\Ecommerce.csproj", "{3D116348-D2A2-4701-9DF7-2C00E7160136}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common", "Common\Common.csproj", "{4D480FAD-997D-4A11-A6E6-233BE1CBE4B1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Database", "Database\Database.csproj", "{C2D4538F-DCF9-4CD0-B7F6-A3B3D253606A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3D116348-D2A2-4701-9DF7-2C00E7160136}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D116348-D2A2-4701-9DF7-2C00E7160136}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D116348-D2A2-4701-9DF7-2C00E7160136}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D116348-D2A2-4701-9DF7-2C00E7160136}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D480FAD-997D-4A11-A6E6-233BE1CBE4B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D480FAD-997D-4A11-A6E6-233BE1CBE4B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D480FAD-997D-4A11-A6E6-233BE1CBE4B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D480FAD-997D-4A11-A6E6-233BE1CBE4B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2D4538F-DCF9-4CD0-B7F6-A3B3D253606A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2D4538F-DCF9-4CD0-B7F6-A3B3D253606A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2D4538F-DCF9-4CD0-B7F6-A3B3D253606A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2D4538F-DCF9-4CD0-B7F6-A3B3D253606A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C12B2BF6-2BA0-4379-8FC9-E68787420193}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,84 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model ProductsListViewModel
+<!-- End Banner Area -->
+<div class="container">
+    <div class="row">
+        <div class="col-xl-3 col-lg-4 col-md-5">
+            <div class="sidebar-categories">
+                <div class="head">Browse Categories</div>
+                <ul class="main-categories">
+                    <li class="main-nav-list">
+                        <a data-toggle="collapse" href="#adidas" aria-expanded="false" aria-controls="adidas">
+                            <span class="lnr lnr-arrow-right"></span>ADIDAS<span class="number">(53)</span>
+                        </a>
+                        <ul class="collapse" id="adidas" data-toggle="collapse" aria-expanded="false" aria-controls="adidas">
+                            <li class="main-nav-list child"><a href="#">Shoes<span class="number">(13)</span></a></li>
+                            <li class="main-nav-list child"><a href="#">Clothing<span class="number">(09)</span></a></li>
+                            <li class="main-nav-list child"><a href="#">Sports<span class="number">(17)</span></a></li>
+                            <li class="main-nav-list child"><a href="#">Sale<span class="number">(01)</span></a></li>
+                        </ul>
+                    </li>
+                    <li class="main-nav-list">
+                        <a data-toggle="collapse" href="#nike" aria-expanded="false" aria-controls="nike">
+                            <span class="lnr lnr-arrow-right"></span>NIKE<span class="number">(53)</span>
+                        </a>
+                        <ul class="collapse" id="nike" data-toggle="collapse" aria-expanded="false" aria-controls="nike">
+                            <li class="main-nav-list child"><a href="#">Shoes<span class="number">(13)</span></a></li>
+                            <li class="main-nav-list child"><a href="#">Clothing<span class="number">(09)</span></a></li>
+                            <li class="main-nav-list child"><a href="#">Sports<span class="number">(17)</span></a></li>
+                            <li class="main-nav-list child"><a href="#">Sale<span class="number">(01)</span></a></li>
+                        </ul>
+                    </li>
+                    <li class="main-nav-list">
+                        <a data-toggle="collapse" href="#puma" aria-expanded="false" aria-controls="puma">
+                            <span class="lnr lnr-arrow-right"></span>PUMA<span class="number">(53)</span>
+                        </a>
+                        <ul class="collapse" id="puma" data-toggle="collapse" aria-expanded="false" aria-controls="puma">
+                            <li class="main-nav-list child"><a href="#">Shoes<span class="number">(13)</span></a></li>
+                            <li class="main-nav-list child"><a href="#">Clothing<span class="number">(09)</span></a></li>
+                            <li class="main-nav-list child"><a href="#">Sports<span class="number">(17)</span></a></li>
+                            <li class="main-nav-list child"><a href="#">Sale<span class="number">(01)</span></a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-xl-9 col-lg-8 col-md-7">
+            <!-- Start Filter Bar -->
+            <div class="filter-bar d-flex flex-wrap align-items-center">
+                <div class="sorting mr-auto">
+                    <select>
+                        <option value="1">Show 12</option>
+                        <option value="1">Show 12</option>
+                        <option value="1">Show 12</option>
+                    </select>
+                </div>
+                <div class="pagination">
+                    <div page-model="@Model.PagingInfo" page-action="Category" page-classes-enabled="true"
+                         page-class="btn" page-class-normal="btn-outline-dark"
+                         page-class-selected="btn-primary active" page-url-category="@Model.CurrentCategory" class="btn-group pull-right m-1">
+                    </div>
+                </div>
+            </div>
+            <!-- End Filter Bar -->
+            <!-- Start Best Seller -->
+            <section class="lattest-product-area pb-40 category-list">
+                <div class="row">
+                    @foreach (var p in Model.Products)
+                    {
+                        <partial name="ProductSummary" model="p" />
+
+                    }
+
+                </div>
+            </section>
+            <!-- End Best Seller -->
+
+
+        </div>
+    </div>
+</div>
+

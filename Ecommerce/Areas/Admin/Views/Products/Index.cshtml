@@ -1,0 +1,68 @@
+﻿@model IEnumerable<Common.Entites.Product>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div id="PlaceHolderHere"></div>
+
+<section class="content-header">
+
+    <h1>Products List</h1>
+    <ol class=" breadcrumb float-sm-left">
+        <li class="breadcrumb-item"><a>Admin</a></li>
+        <li class="breadcrumb-item"><a>Products</a></li>
+        <li class="breadcrumb-item active"><a>Products List</a></li>
+    </ol>
+</section>
+<br />
+<div class="card-footer">
+    <a class="btn btn-primary" asp-action="Create">Add Product</a>
+</div>
+<div class="card-body">
+    <table id="example1" class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th> Image </th>
+                <th> Product Name </th>
+                <th> Product Price </th>
+                <th> Update </th>
+                <th> Delete </th>
+            </tr>
+        </thead>
+        @foreach (var item in Model)
+        {
+            <tbody>
+                <tr id="@item.ProductId">
+                    <td><img src="~/picture/@item.ProductImage" class="img-thumbnail" style="height:100px; width:100px" alt="@item.ProductName" /></td>
+                    <td> @item.ProductName </td>
+                    <td> @item.ProductPrice </td>
+                    <td align="center" valign="middle">
+                        <button type="button" class="btn" data-toggle="ajax-modal" data-target="#Edit"
+                                data-url="@Url.Action($"Edit/{item.ProductId}")">
+                            <br />
+                            <img src="~/images/icons/updates-16.ico" />
+                        </button>
+                    </td>
+                    <td align="center" valign="middle">
+                        <button type="button" class="btn" data-toggle="ajax-modal" data-target="#Delete"
+                                data-url="@Url.Action($"Delete/{item.ProductId}")">
+                            <br />
+                            <img src="~/images/icons/delete-16.ico" />
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        }
+        <tfoot>
+            <tr>
+                <td> Image </td>
+                <td> Product Name </td>
+                <td> Product Price </td>
+                <td> Update </td>
+                <td> Delete </td>
+            </tr>
+        </tfoot>
+    </table>
+</div>

@@ -1,0 +1,189 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+
+<!-- Page Wrapper -->
+<section class="masthead">
+    <div class="container px-5">
+        <div class="row gx-5 align-items-center">
+            <div class="col-lg-5">
+                <!-- Mashead text and app badges-->
+                <div class="mb-5 mb-lg-0 text-center text-lg-start">
+                    <h4 class="lead fw-normal text-muted mb-3">Kick off the season right with a personalized </h4>
+                    <h1 class="display-1 lh-1 mb-3 shadow-text">FOOTBALL SHOES ADIDAS</h1>
+                    <div class="d-flex flex-column flex-lg-row align-items-center">
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-7">
+                <div class="wrap-image">
+                    <img src="~/images/banner/soccer-banner-3.jpg" />
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Page Wrapper -->
+
+<section>
+    <div class="bbb_viewed">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="bbb_main_container">
+                        <div class="bbb_viewed_title_container">
+                            <h1 class="bbb_viewed_title">Best selling products</h1>
+                            <div class="bbb_viewed_nav_container">
+                                @*<div class="bbb_viewed_nav bbb_viewed_prev"><i class="fas fa-chevron-left"></i></div>
+                                    <div class="bbb_viewed_nav bbb_viewed_next"><i class="fas fa-chevron-right"></i></div>*@
+                            </div>
+                        </div>
+                        <div class="bbb_viewed_slider_container">
+                            <div class="owl-carousel owl-theme bbb_viewed_slider">
+                                @foreach (var p in ViewBag.TopProducts)
+                                {
+                                    <div class="owl-item">
+                                        <div class="bbb_viewed_item d-flex flex-column align-items-center justify-content-center text-center">
+                                            <a asp-action="Category" asp-controller="Home" asp-area="">
+                                                <div class="bbb_viewed_image">
+                                                    <img src="~/picture/@p.ProductImage" class="img-fluid" alt="@p.ProductName" />
+                                                </div>
+                                                <div class="bbb_viewed_content text-center">
+                                                    <div class="bbb_viewed_price">
+                                                        <h6>@p.ProductPrice.ToString("c")</h6>
+                                                    </div>
+                                                    <div class="bbb_viewed_name" style="color: black"> @p.ProductName</div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                        <div class="bbb_viewed_title_container">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- start features Area -->
+<section class="features-area section_gap">
+    <div class="container">
+        <div class="row features-inner">
+            <!-- single features -->
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="single-features">
+                    <div class="f-icon">
+                        <img src="~/images/icons/f-icon1.png" />
+                    </div>
+                    <h6>Free Delivery</h6>
+                    <p>Free Shipping on all order</p>
+                </div>
+            </div>
+            <!-- single features -->
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="single-features">
+                    <div class="f-icon">
+                        <img src="~/images/icons/f-icon2.png" alt="">
+                    </div>
+                    <h6>Return Policy</h6>
+                    <p>Free Shipping on all order</p>
+                </div>
+            </div>
+            <!-- single features -->
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="single-features">
+                    <div class="f-icon">
+                        <img src="~/images/icons/f-icon3.png" alt="">
+                    </div>
+                    <h6>24/7 Support</h6>
+                    <p>Free Shipping on all order</p>
+                </div>
+            </div>
+            <!-- single features -->
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="single-features">
+                    <div class="f-icon">
+                        <img src="~/images/icons/f-icon4.png" alt="">
+                    </div>
+                    <h6>Secure Payment</h6>
+                    <p>Free Shipping on all order</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end features Area -->
+<!-- Start category Area -->
+<section class="category-area">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-12">
+                <div class="row">
+                    <div class="col-lg-8 col-md-8">
+                        <div class="single-deal">
+                            <div class="overlay"></div>
+                            <img class="img-fluid w-100" src="~/images/category/c1.jpg" alt="">
+                            <a href="javascript:void(0)" class="img-pop-up">
+                                <div class="deal-details">
+                                    <h6 class="deal-title">Sneaker for Sports</h6>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4">
+                        <div class="single-deal">
+                            <div class="overlay"></div>
+                            <img class="img-fluid w-100" src="~/images/category/c2.jpg" alt="">
+                            <a href="javascript:void(0)" class="img-pop-up">
+                                <div class="deal-details">
+                                    <h6 class="deal-title">Sneaker for Sports</h6>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4">
+                        <div class="single-deal">
+                            <div class="overlay"></div>
+                            <img class="img-fluid w-100" src="~/images/category/c3.jpg" alt="">
+                            <a href="javascript:void(0)" class="img-pop-up">
+                                <div class="deal-details">
+                                    <h6 class="deal-title">Product for Couple</h6>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 col-md-8">
+                        <div class="single-deal">
+                            <div class="overlay"></div>
+                            <img class="img-fluid w-100" src="~/images/category/c4.jpg" alt="">
+                            <a href="javascript:void(0)" class="img-pop-up">
+                                <div class="deal-details">
+                                    <h6 class="deal-title">Sneaker for Sports</h6>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="single-deal">
+                    <div class="overlay"></div>
+                    <img class="img-fluid w-100" src="~/images/category/c5.jpg" alt="">
+                    <a href="javascript:void(0)" class="img-pop-up">
+                        <div class="deal-details">
+                            <h6 class="deal-title">Sneaker for Sports</h6>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End category Area -->

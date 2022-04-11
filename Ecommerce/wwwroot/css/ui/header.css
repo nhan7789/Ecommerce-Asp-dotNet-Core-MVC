@@ -1,0 +1,212 @@
+﻿
+/*---------------------------------------------------- HEADER 1 */
+.bg-wrap-header-top {
+    position: relative;
+    height: auto;
+    background-color: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.wrap-header-section-top {
+    display: flex;
+    align-items: center;
+    margin: 5px 60px;
+}
+
+    .wrap-header-section-top a {
+        text-decoration: none;
+    }
+/*hover charater*/
+.bg-wrap-header-top a {
+    color: #000;
+    margin-right: 10px;
+}
+
+    .bg-wrap-header-top a:hover {
+        border-bottom: 1px solid #000;
+    }
+/*---------------------------------------------------- HEADER 1 */
+
+/*---------------------------------------------------- HEADER 2 */
+.bg-wrap-header-bot {
+    position: relative;
+    height: auto;
+    background-color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    border-bottom: 2px solid #f5f5f5;
+}
+
+.logo-header-bot {
+    width: 7%;
+    height: auto;
+}
+
+    .logo-header-bot img {
+        width: 100%;
+    }
+
+.content-header-bot a {
+    margin: auto 20px;
+}
+
+.bg-wrap-header-bot input[type=text] {
+    margin: 6px;
+    font-size: 14px;
+    border: 2px solid #f5f5f5;
+}
+
+.bg-wrap-header-bot .search-container a {
+    position: absolute;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.wrap-header-section-bot {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 5px 60px;
+    align-items: center;
+}
+/*------------------- content-header-2 */
+.wrap-button {
+    display: inline-block;
+}
+
+.has-child a {
+    text-decoration: none;
+    color: #000;
+}
+
+li.has-child {
+    list-style: none;
+}
+/* ADIAS - NIKE - PUMA */
+.has-child {
+    padding-top: 10%;
+    display: block;
+}
+
+.child-items {
+    display: none;
+    position: absolute;
+    min-width: 100vw;
+    z-index: 1;
+    right: 0;
+}
+
+.has-child:hover .child-items {
+    display: block;
+}
+/* container-child dropdown*/
+.container-child {
+    margin: 0.9% 10%;
+    background-color: #fff;
+}
+/*--------------------------------- hover character  nav-bar*/
+.has-child a:hover {
+    padding-bottom: 7px;
+    border-bottom: 2px solid #000;
+}
+/*---------------------------------- custom-child content */
+.container-child {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center;
+}
+
+    .container-child h6 {
+        margin: 0;
+    }
+
+.wrap-img-cate {
+    width: 11vw;
+}
+
+    .wrap-img-cate img {
+        width: 100%;
+        border-radius: 15%;
+    }
+
+// .wrap-cate.vertical-line {
+    // border-right: 2px solid #f5f5f5;
+    //
+}
+
+
+
+
+
+
+
+
+
+/*------------------- Button right */
+.button-header-bot {
+    display: flex;
+}
+/* SEARCH BAR*/
+.search-form {
+    --searchButtonWidth: 75px;
+    max-width: 22.5vw;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.search-input {
+    border: 0;
+    margin: 0;
+    padding: 1rem calc(var(--searchButtonWidth) + 1rem) 1rem 1rem;
+    border-radius: 8px;
+    width: 100%;
+    background: #f5f5f5;
+    -webkit-appearance: none;
+    font-size: 13px;
+}
+
+    .search-input:focus {
+        outline: 0;
+        background: white;
+    }
+
+    .search-input:not(:placeholder-shown) ~ .search-button {
+        transform: translateX(calc(-1 * var(--searchButtonWidth)));
+    }
+
+.search-button {
+    border: 0;
+    padding: 0.5rem;
+    border-radius: 8px;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: var(--searchButtonWidth);
+    transition: 0.2s;
+    background: #000;
+    color: white;
+    font-size: 13px;
+    height: 100%;
+}
+
+    .search-button:focus {
+        outline: 0;
+        background: #222;
+    }
+/* Cart */
+.shoppingbag-button img {
+    width: 2.8vw;
+    margin-left: 10px;
+}
+
+a.shoppingbag-button img:hover {
+    border: 2px solid #000;
+    border-radius: 10%;
+}
+/*---------------------------------------------------- HEADER 2 */
